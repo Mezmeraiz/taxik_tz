@@ -8,7 +8,13 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.mezmeraiz.taxik_tz.MainActivity">
+    tools:context="com.mezmeraiz.taxik.ui.MainActivity">
+
+    <ProgressBar
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/progressBar" />
 
 
     <android.support.v7.widget.RecyclerView

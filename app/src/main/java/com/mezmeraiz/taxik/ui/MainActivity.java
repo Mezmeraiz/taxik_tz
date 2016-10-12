@@ -7,6 +7,7 @@ import android.support.v4.content.Loader;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 import com.mezmeraiz.taxik.AdapterListener;
 import com.mezmeraiz.taxik.R;
 import com.mezmeraiz.taxik.adapters.CityAdapter;
@@ -42,6 +43,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
     @Override
     public void onLoadFinished(Loader<List<Cities.City>> loader, List<Cities.City> data) {
+        findViewById(R.id.progressBar).setVisibility(View.INVISIBLE);
         if(data != null)
             mRecyclerView.setAdapter(new CityAdapter(this, data, this));
     }
